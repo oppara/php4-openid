@@ -141,6 +141,8 @@ function Auth_OpenID_remove_dot_segments($path)
 
 function Auth_OpenID_urinorm($uri)
 {
+    $uri = trim($uri);
+
     $uri_matches = array();
     preg_match(Auth_OpenID_getURIPattern(), $uri, $uri_matches);
 
